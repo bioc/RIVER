@@ -15,8 +15,9 @@ Get most recent version of R (>= 3.3.2) from [CRAN](http://cran.r-project.org/).
 
 ```R
 ## try http:// if https:// URLs are not supported
-source("https://bioconductor.org/biocLite.R")
-biocLite("RIVER")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("RIVER")
 ```
 # Vignettes
 

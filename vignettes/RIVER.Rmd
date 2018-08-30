@@ -360,8 +360,9 @@ by using the following commands in your `R` session:
 
 ```{r, eval=FALSE}
 ## try http:// if https:// URLs are not supported
-source("https://bioconductor.org/biocLite.R")
-biocLite("RIVER")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("RIVER")
 ```
 
 [Back to Top](#top)

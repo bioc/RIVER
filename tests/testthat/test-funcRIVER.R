@@ -7,7 +7,7 @@ test_that("Basic functions work as expected", {
                                            package = "RIVER"), ZscoreThrd=1.5)
   FeatAll <- t(exprs(dataInput)) # all genomic features
   OutAll <- as.numeric(unlist(dataInput$Outlier))-1 # all outlier status
-  expect_equal(inherits(FeatTrng,"matrix"),TRUE)
+  expect_equal(inherits(FeatAll,"matrix"),TRUE)
   expect_equal(inherits(OutAll,"numeric"),TRUE)
   expect_equal(length(unique(OutAll)),2) # either outlier or nonoutlier
 
